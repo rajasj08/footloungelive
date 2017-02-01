@@ -56,8 +56,8 @@ ecomm_pagetype: "home"
   "@context": "http://schema.org",
   "@type": "Organization",
   "name" : "footlounge",
-  "url": "https://footlounge.in.in",
-  "logo": "https://footlounge.in.in/image/data/lo2logo.png",
+  "url": "https://footlounge.in",
+  "logo": "https://footlounge.in/image/data/lo2logo.png",
   "contactPoint": [{
     "@type": "ContactPoint",
     "telephone": "+91-91768-70701",
