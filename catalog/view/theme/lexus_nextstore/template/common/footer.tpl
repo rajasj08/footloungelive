@@ -263,7 +263,7 @@ $class = $helper->calculateSpans( $ospans, $cols );
 <?php } else { ?>
 	<?php echo $powered; ?>. 
 <?php } ?> -->
-gofootlounge.in powered by <a href="http://tech-bee.com/" target="_blank">Tech-Bee</a>. All Rights Reserved.
+footlounge.in powered by <a href="http://tech-bee.com/" target="_blank">Tech-Bee</a>. All Rights Reserved.
 
 
 </div>	
@@ -278,7 +278,7 @@ gofootlounge.in powered by <a href="http://tech-bee.com/" target="_blank">Tech-B
 
 <script>
 $( document ).ready(function() {
-$( "#clickme img" ).click(function() {
+$( "#clickme img" ).click(function() { 
   $( "#footer_botbtn" ).toggle( "fast", function() {
     // Animation complete.
   });
