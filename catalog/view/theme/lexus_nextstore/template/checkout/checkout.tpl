@@ -453,8 +453,8 @@ $('#button-register').live('click', function() {
 					$('#payment-address input[name=\'address_1\'] + br').after('<span class="error">' + json['error']['address_1'] + '</span>');
 				}
 				
-				if (json['error']['address_2']) {
-					$('#payment-address input[name=\'address_2\'] + br').after('<span class="error">' + json['error']['address_2'] + '</span>');
+				if (json['error']['phone']) {
+					$('#payment-address input[name=\'phone\'] + br').after('<span class="error">' + json['error']['phone'] + '</span>');
 				}	
 				
 					
