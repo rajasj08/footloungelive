@@ -310,7 +310,7 @@ $(".mobcnt").hide();
 You should use a sports specific shoe if you play a sport 3 times a week or more.
 Sports Shoes enhance your performance on the field and help prevent injuries. 
 <b class="boldc">Treat Your Feet Right. Get them a Sports Shoe.</b>  
-<u>Shoes Do Not Multi-task</u>. When you walk / run or play a sport your feet need the right shoe for each.
+<span class="underlinecls">Shoes Do Not Multi-task</span>. When you walk / run or play a sport your feet need the right shoe for each.
 
 <div class="footernstyle">Sports Shoes at FootLounge</div>
 Footlounge is a leading sports footwear and apparel retailer based out of Chennai, India. We opened doors in April 2007 and have grown to 19 stores since inception. We offer sports specific performance products manufactured by leading athletic brands. Our specialized service includes providing our customers expert guidance on the type of shoe needed for their sport. Our reputed range of brands include Adidas, Reebok, Nike, Puma, Fila, Lee Cooper and Woodland.
@@ -359,7 +359,7 @@ Prices starting from Rs 454/- . Try us out Now!
 			<div class="col-md-12 paypart">
 				<div class="row topclasspay">
 				<!--<h3><b>Payment Options</b></h3> -->
-					<div class="payoptdivcls"><img src="image/Payment-Options/FL-Mobile-Payment-Options.jpg" class="payoptcls1x"></div> 
+					<div class="payoptdivcls"><img src="image/Payment-Options/FL-Mobile-Payment-Options.jpg" alt="FootLounge Payment Options" class="payoptcls1x"></div> 
 					
 				</div>
 			</div>	
@@ -392,10 +392,7 @@ $class = $helper->calculateSpans( $ospans, $cols );
 </div>
 <?php } ?>
 
-<!--
-OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
-Please donate via PayPal to donate@opencart.com
-//-->
+
 
 
 </footer>
@@ -425,10 +422,7 @@ if(isset($newsletter_bottom) && !empty($newsletter_bottom[0])) {
 
 
 
-<!--
-OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
-Please donate via PayPal to donate@opencart.com
-//-->
+
 <?php if( isset($themeConfig['enable_paneltool']) && $themeConfig['enable_paneltool'] ){  ?>
 	<?php  echo $helper->renderAddon( 'panel' );?>
 <?php } ?>
@@ -496,7 +490,7 @@ src="//www.googleadservices.com/pagead/conversion.js">
 </script>
 <noscript>
 <div class="new_page_disp2">
-<img height="1" width="1" class="new_page_disp1" alt=""
+<img height="1" width="1" class="new_page_disp1" alt="FootLounge Google ads"
 src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/956201375/?v
 alue=0&amp;guid=ON&amp;script=0"/>
 </div>

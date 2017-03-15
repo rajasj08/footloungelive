@@ -938,7 +938,7 @@ $discountdisn='<img src="https://footlounge.in/image/data/Social%20Icons/IndianR
 		$newresults = $this->model_sale_order->getallcusts($data);
                 
                 //$couponcodes= $this->model_sale_order->getcouponcodeinfos(); //get coupon code for abandoned user 
-              
+             
     	foreach ($newresults as $result) {
 
 			/*$action = array();
@@ -963,33 +963,35 @@ $discountdisn='<img src="https://footlounge.in/image/data/Social%20Icons/IndianR
 
 			$this->data['abusers'][] = array(
 				/*'ab_cust_id'      => $result['ab_cust_id'],*/
-				'userid'      => $result['userid'],
+				'userid'      => $result['ab_cust_id'],
                                 'usertype'    =>$username,
 				'cust_mailid'        => $result['cust_mailid'],
-				'mobileno' =>'',
+				'mobileno' =>$result['mobile_no'],
+                                'added_date' => $result['order_date'],
 				);
 		}
 
-
+//print_r('<pre>'); print_r($this->data['abusers']); die; 
                 //get all registered customer list
 
                  $newresults2 = $this->model_sale_order->getallregcusts($data);
-                
+               
                 //$couponcodes= $this->model_sale_order->getcouponcodeinfos(); //get coupon code for abandoned user 
-              
-    	        foreach ($newresults2 as $result2) {
+               
+    	        foreach ($newresults2 as $result4) {
                     // if(in_array($result1['os_mailid'],$this->data['abusers']))
-
+                      if($result4['customer_id']==117){ echo "sdfsdf"; die; }
                       $this->data['abusers'][] = array(
-				/*'ab_cust_id'      => $result2['ab_cust_id'],*/
-				'userid'      => $result2['customer_id'],
+				/*'ab_cust_id'      => $result4['ab_cust_id'],*/
+				'userid'      => $result4['customer_id'],
                                 'usertype'    =>'Registered',
-				'cust_mailid'        => $result2['email'],
-				'mobileno' =>$result2['telephone'],
+				'cust_mailid'        => $result4['email'],
+				'mobileno' =>$result4['telephone'],
+                                 'added_date' => $result4['date_added'], 
 				);
                  
                 }
-
+//print_r('<pre>'); print_r($this->data['abusers']); die; 
                 
                 //get out of stockuser list
                 $newresults1 = $this->model_sale_order->getalloscusts($data);
@@ -1001,16 +1003,17 @@ $discountdisn='<img src="https://footlounge.in/image/data/Social%20Icons/IndianR
 
                       $this->data['abusers'][] = array(
 				/*'ab_cust_id'      => $result1['ab_cust_id'],*/
-				'userid'      => '',
+				'userid'      => $result1['os_cust_id'],
                                 'usertype'    =>'Out Of Stock',
 				'cust_mailid'        => $result1['os_mailid'],
 				'mobileno' =>$result1['os_phoneno'],
+                                 'added_date' => $result1['os_createddate'], 
 				);
                  
                 }
 
                 $order_total = count( $this->data['abusers']);
-              // print_r('<pre>'); print_r($this->data['abusers']); die; 
+              //print_r('<pre>'); print_r($this->data['abusers']); die; 
                 
 		$this->data['heading_title'] = $this->language->get('heading_title');
 
@@ -1159,6 +1162,16 @@ $discountdisn='<img src="https://footlounge.in/image/data/Social%20Icons/IndianR
 		
 		$this->response->setOutput($this->render());
   	}
-    
+
+      public function removecustomerinfo() //update abandoned user details
+      {
+            $userid=$this->request->post['userid'];
+            $usertype=$this->request->post['usertype']; 
+            $this->load->model('sale/order');
+            echo $newresults = $this->model_sale_order->removecustomer($userid,$usertype);
+           
+           
+       }
+ 
 }
 ?>
