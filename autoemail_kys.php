@@ -110,7 +110,7 @@ if ($result->num_rows > 0) {
           // Create email headers$emailid
       
         // if( mail('Pooja_khatri@yahoo.com', 'Email Notification Request Received', $str1, $headers))
-       if( mail('rselakki@yahoo.com', 'Don’t know your accurate Shoe Size??? Find out from FootLounge!', $message1, $headers))
+       if( mail('Pooja_khatri@yahoo.com', 'Don’t know your accurate Shoe Size??? Find out from FootLounge!', $message1, $headers))
        { $count++;} else echo 0;         
  
         }  
