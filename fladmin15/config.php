@@ -36,5 +36,5 @@ define('DB_USERNAME', 'fladmin');
 define('DB_PASSWORD', 'Welcome!23');
 define('DB_DATABASE', 'ebdb');
 define('DB_PORT', '3306');
-define('DB_PREFIX', 'oc_');*/
+define('DB_PREFIX', 'oc_');*/ 
 ?>

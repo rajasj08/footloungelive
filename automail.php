@@ -58,7 +58,7 @@ $conn->close(); */
 
 <?php 
 
-$servername = "aa128rcsxrj96v2.cvwrkeif9dtm.ap-south-1.rds.amazonaws.com";
+$servername = "aa123cnq8bv20jg.cvwrkeif9dtm.ap-south-1.rds.amazonaws.com";
 $username = "fladmin";
 $password = "Welcome!23";
 $dbname = "ebdb";

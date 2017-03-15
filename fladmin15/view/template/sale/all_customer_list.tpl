@@ -353,7 +353,9 @@ if(a==1){
       success: function(resp) { 
 
          if(resp==1){
-          alert('Customer removed successfully!'); location.reload(); }
+          alert('Customer removed successfully!'); 
+          location.reload(); 
+        }
          else{ alert('failed'); }
     
       }

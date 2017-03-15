@@ -938,7 +938,7 @@ $discountdisn='<img src="https://footlounge.in/image/data/Social%20Icons/IndianR
 		$newresults = $this->model_sale_order->getallcusts($data);
                 
                 //$couponcodes= $this->model_sale_order->getcouponcodeinfos(); //get coupon code for abandoned user 
-             
+            
     	foreach ($newresults as $result) {
 
 			/*$action = array();
@@ -971,27 +971,28 @@ $discountdisn='<img src="https://footlounge.in/image/data/Social%20Icons/IndianR
 				);
 		}
 
-//print_r('<pre>'); print_r($this->data['abusers']); die; 
+
                 //get all registered customer list
 
                  $newresults2 = $this->model_sale_order->getallregcusts($data);
-               
+
+             
                 //$couponcodes= $this->model_sale_order->getcouponcodeinfos(); //get coupon code for abandoned user 
                
     	        foreach ($newresults2 as $result4) {
                     // if(in_array($result1['os_mailid'],$this->data['abusers']))
-                      if($result4['customer_id']==117){ echo "sdfsdf"; die; }
+                    
                       $this->data['abusers'][] = array(
 				/*'ab_cust_id'      => $result4['ab_cust_id'],*/
 				'userid'      => $result4['customer_id'],
                                 'usertype'    =>'Registered',
 				'cust_mailid'        => $result4['email'],
-				'mobileno' =>$result4['telephone'],
+				'mobileno' =>$result4['mobile'],
                                  'added_date' => $result4['date_added'], 
 				);
                  
                 }
-//print_r('<pre>'); print_r($this->data['abusers']); die; 
+
                 
                 //get out of stockuser list
                 $newresults1 = $this->model_sale_order->getalloscusts($data);
@@ -1013,7 +1014,7 @@ $discountdisn='<img src="https://footlounge.in/image/data/Social%20Icons/IndianR
                 }
 
                 $order_total = count( $this->data['abusers']);
-              //print_r('<pre>'); print_r($this->data['abusers']); die; 
+             // print_r('<pre>'); print_r($this->data['abusers']); die; 
                 
 		$this->data['heading_title'] = $this->language->get('heading_title');
 
