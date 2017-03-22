@@ -206,9 +206,9 @@ class ControllerCheckoutRegister extends Controller {
 				$json['error']['address_1'] = $this->language->get('error_address_1');
 			}
 	           
-			if ((utf8_strlen($this->request->post['phone']) < 10) || (utf8_strlen($this->request->post['phone']) > 10)) {
-				$json['error']['phone'] = "Mobile No must be 10 characters!";
-			}   
+			if ((utf8_strlen($this->request->post['mobile']) < 10) || (utf8_strlen($this->request->post['mobile']) > 10)) {
+				$json['error']['mobile'] = "Mobile No must be 10 characters!";
+			}    
 			   
 			if ((utf8_strlen($this->request->post['city']) < 2) || (utf8_strlen($this->request->post['city']) > 128)) {
 				$json['error']['city'] = $this->language->get('error_city');

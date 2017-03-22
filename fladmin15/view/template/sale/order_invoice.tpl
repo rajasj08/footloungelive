@@ -99,7 +99,20 @@
       <td align="right"><?php echo $voucher['amount']; ?></td>
     </tr>
     <?php } ?>
-    <?php foreach ($order['total'] as $total) { ?>
+    <?php $coupon_tot=0; foreach ($order['total'] as $total) {
+
+       if($total['code']=='coupon')
+      {
+        $coupon_tot=round($total['value']); 
+      }
+
+      if($total['code']=='total')
+      {
+        $total['value']=round($total['value']+$coupon_tot);
+        $total['text']='<span class="WebRupee">Rs</span>'.$total['value']; 
+      }
+
+     ?>
     <tr>
       <td align="right" colspan="4"><b><?php echo $total['title']; ?>:</b></td>
       <td align="right"><?php echo $total['text']; ?></td>
